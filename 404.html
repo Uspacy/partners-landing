@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Uspacy Landing Page</title>
+  </head>
+  <body>
+    <header class="home-header dark">
+      <div class="container">
+        <div class="header-wrapper">
+          <a href="#" class="logo">
+            <img class="light-logo" src="images/logo.svg" alt="Uspacy" />
+            <img class="dark-logo" src="images/logo_dark.svg" alt="Uspacy" />
+          </a>
+          <a href="#" class="plus-btn open-popup"><span></span></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="bg-404">
+        <div class="container">
+          <div class="container-404">
+            <img src="./images/404.svg" style="margin-bottom: 16px" />
+            <span class="what-is-uspacy-title gradient-text"
+              >Ой, лишенько, немає такої сторінки...</span
+            >
+            <h6 class="white-color" style="margin-bottom: 76px">
+              Але є де залишити свою адресу електронної пошти, щоб<br />
+              дізнатися про запуск Uspacy 😉
+            </h6>
+            <button class="magenta-btn button-text" href="#">
+              <span class="plus2"></span>Cтати партнером uspacy
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="menu-404">
+        <div class="container">
+            <div class="bottom-menu">
+                <div class="social-links">
+                    <!-- <a class="current-language-footer text-mini" href="#">ua<img class="link-icon" src="images/arrow-top.svg"></a> -->
+                    <a href="#" class="footer-link text-mini">facebook</a>
+                    <a href="#" class="footer-link text-mini ">linkedin</a>
+                    <a href="#" class="footer-link text-mini">twitter</a>
+                    <a href="#" class="footer-link text-mini">instagram</a>
+                    <a href="#" class="footer-link text-mini">telegram</a>
+                </div>
+                <div class="links-policy">
+                    <a href="privacy-policy.html" class="text-mini">політика конфідеційності</a>
+                    <a href="coockies.html" class="text-mini">реп’яшки</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="pop-up-wrapper">
+      <div class="pop-up-header">
+          <span>
+              Будь з нами!
+          </span>
+          <button>
+              <img src="images/add-popUp.svg" class="close-popup" alt="">
+          </button>
+      </div>
+      <div class="pop-up-content">
+          <p class="text-light">Ставайте частиною 
+родини партнерів Uspacy</p>
+          <form class="footer-form">
+              <input name="username" id="username_sosi" autocomplete="off" class="form-input text-light" placeholder="Ім’я та прізвище">
+              <input name="email" id="email" autocomplete="off" class="form-input text-light" type="text" placeholder="Email">
+              <input name="phone" id="phone" autocomplete="off" class="form-input text-light" type="number" placeholder="Номер телефону">
+                          <div class="checkbox-wrapper">
+                  <input type="checkbox" name="agree" class="form-checkbox">
+                  <label for="agree" class="text-mini">Даю згоду на обробку персональних даних згідно <a
+                  href="privacy-policy.html" style="color: #13D9F7;">політикою конфіденційності.</a></label>
+              </div>
+              <button class="magenta-btn button-text pop-up-button-join" href="#"><span class="plus2"></span>Cтати партнером
+                  uspacy</button>
+          </form>
+      </div>
+      <div class="pop-up-footer">
+          <button class="close-popup">
+              <img src="images/close.svg" alt="">
+              <span>закрити</span>
+          </button>
+      </div>
+  </div>
+  <div class="overlay"></div>
+  </body>
+</html>
