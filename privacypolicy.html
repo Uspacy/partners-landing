@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Uspacy Landing Page</title>
+    <title>Політика конфіденційності</title>
 </head>
 <body>
     <header class="home-header dark inner-header">
         <div class="container">
             <div class="header-wrapper">
-                <a href="#" class="logo">
+                <a href="index.html" class="logo">
                     <img class="light-logo" src="images/logo.svg" alt="Uspacy">
                     <img class="dark-logo" src="images/logo_dark.svg" alt="Uspacy">
                 </a>
@@ -140,65 +140,67 @@
             </div>
         </div>
     </main>
-        <footer style="background-image: url(../images/bg-footer.png);">
-            <div class="container">
+            <footer style="background-image: url(../images/bg-footer.png);" data-color="dark">
+        <div class="container">
+            <div class="footer-content-wrapper">
+                <img class="footer-decor-img" src="./images/footer-bg.png" alt="">
                 <div class="form-wrapper">
-                    <h2>Ставайте частиною </br>
-                        родини партнерів Uspacy</h2>
-                    <p class="text-light">Створюйте та розвивайте свій власний бізнес на </br>основі чесного партнерства з нами
-                    </p>
+                    <h2>Ставай частиною </br> 
+                    родини партнерів Uspacy</h2>
+                    <p class="text-light">Створюй та розвивай власний бізнес на основі чесного та відкритого партнерства з нами</p>
                     <form class="footer-form" action="">
-                        <input class="form-input text-light" type="text" placeholder="Ім’я та Прозвіще">
-                        <input class="form-input text-light" type="text" placeholder="Email">
-                        <input class="form-input text-light" type="number" placeholder="Номер телефону">
-                        <div class="checkbox-wrapper"><input type="checkbox" name="agree" class="form-checkbox">
-                            <label for="agree" class="text-mini">Даю згоду на обробку персональних даних згідно <a href="#"
-                                    style="color: #4238E5;">політики конфіденційності.</a></label>
+                        <input name="username" id="username" class="form-input text-light" type="text" placeholder="Ім’я та прізвище">
+                        <input name="email" id="email" class="form-input text-light" type="text" placeholder="Електронна пошта">
+                        <input name="phone" id="phone" class="form-input text-light" type="number" placeholder="Номер телефону (з кодом оператора)">
+                        <div class="checkbox-wrapper">
+                            <input  id="checkbox" type="checkbox" name="agree" class="form-checkbox">
+                            <label for="agree" class="text-mini">Даю згоду на обробку персональних даних згідно <a href="privacypolicy.html" style="color: #4238E5;">політикою конфіденційності.</a></label>
                         </div>
-                        <button class="form-btn button-text" href="#"><span class="plus"></span>Cтати партнером uspacy</button>
+                        <button id="bottom-from-submit-btn" class="magenta-btn button-text" href="#"><span class="plus2"></span>Cтати партнером uspacy</button>
                     </form>
                 </div>
-                <div class="bottom-menu">
-                    <div class="social-links">
-                        <a class="current-language-footer text-mini" href="#">ua<img class="link-icon"
-                                src="images/arrow-top.svg"></a>
-                        <a href="#" class="footer-link text-mini">facebook</a>
-                        <a href="#" class="footer-link text-mini ">linkedin</a>
-                        <a href="#" class="footer-link text-mini">twitter</a>
-                        <a href="#" class="footer-link text-mini">instagram</a>
-                        <a href="#" class="footer-link text-mini">telegram</a>
-                    </div>
-                    <div class="links-policy">
-                        <a href="#" class="text-mini">політика конфідеційності</a>
-                        <a href="#" class="text-mini">реп’яшки</a>
-                    </div>
+            </div>
+            <div class="bottom-menu">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/uspacy.ukraine" class="footer-link text-mini">facebook</a>
+                    <a href="https://www.linkedin.com/company/uspacy" class="footer-link text-mini ">linkedin</a>
+                    <a href="https://twitter.com/uspacycom" class="footer-link text-mini">twitter</a>
+                    <a href="#" class="footer-link text-mini">instagram</a>
+                    <a href="#" class="footer-link text-mini">telegram</a>
+                </div>
+                <div class="links-policy">
+                    <a href="privacy-policy.html" class="text-mini">політика конфідеційності</a>
+                    <a href="cookies.html" class="text-mini">реп’яшки</a>
                 </div>
             </div>
-        </footer>
-         <div class="pop-up-wrapper">
+        </div>
+    </footer>
+    <div class="pop-up-wrapper">
         <div class="pop-up-header">
             <span>
-                Будь з нами!
+                Приєднуйся до нас!
             </span>
             <button>
                 <img src="images/add-popUp.svg" class="close-popup" alt="">
             </button>
         </div>
         <div class="pop-up-content">
-            <p class="text-light">Ставайте частиною 
-                родини партнерів Uspacy</p>
+            <p class="text-light">Ставай частиною родини партнерів Uspacy</p>
             <form class="footer-form" action="">
-                <input class="form-input text-light" type="text" placeholder="Ім’я та прізвище">
-                <input class="form-input text-light" type="text" placeholder="Email">
-                <input class="form-input text-light" type="number" placeholder="Номер телефону">
-                            <div class="checkbox-wrapper">
-                    <input type="checkbox" name="agree" class="form-checkbox">
-                    <label for="agree" class="text-mini">Даю згоду на обробку персональних даних згідно <a
-                    href="privacy-policy.html" style="color: #13D9F7;">політикою конфіденційності.</a></label>
+                <input name="username" id="username" class="form-input text-light" type="text" placeholder="Ім’я та прізвище">
+                <input name="email" id="email" class="form-input text-light" type="text" placeholder="Електронна пошта">
+                <input name="phone" id="phone" class="form-input text-light" type="number" placeholder="Номер телефону (з кодом оператора)">
+                <div class="checkbox-wrapper">
+                    <input  id="checkbox" type="checkbox" name="agree" class="form-checkbox">
+                    <label for="agree" class="text-mini">Даю згоду на обробку персональних даних згідно <a href="privacypolicy.html" style="color: #4238E5;">політикою конфіденційності.</a></label>
                 </div>
-                <button class="magenta-btn button-text pop-up-button-join" href="#"><span class="plus2"></span>Cтати партнером
-                    uspacy</button>
+                <button id="bottom-from-submit-btn" class="magenta-btn button-text"><span class="plus2"></span>Cтати партнером uspacy</button>
             </form>
+            <!-- <div class="succesed-form">
+                <span>🤩</span>
+                <span>Заявку успішно надіслано!</span>
+                <p>Зовсім скоро ми проінформуємо вас про запуск партнерської програми Uspacy</p>
+            </div> -->
         </div>
         <div class="pop-up-footer">
             <button class="close-popup">
@@ -209,4 +211,5 @@
     </div>
     <div class="overlay"></div>
 </body>
+<script  src="script.js"></script>
 </html>

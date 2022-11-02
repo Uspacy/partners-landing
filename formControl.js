@@ -10,7 +10,7 @@ console.log({ usernameEl, emailEl, checkBoxEl });
 const checkUsername = () => {
   let valid = false;
 
-  const min = 6,
+  const min = 3,
     max = 25;
 
   const username = usernameEl.value.trim();
@@ -60,7 +60,6 @@ const isBetween = (length, min, max) =>
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-alert(1)
   let isUsernameValid = checkUsername(),
     isEmailValid = checkEmail(),
     isPhoneValid = checkPhone(),
