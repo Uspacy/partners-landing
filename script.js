@@ -24,6 +24,7 @@ $(document).ready(function () {
     overlay.classList.add("active");
     body.classList.add("overflow");
     popup.classList.add("active");
+    console.log('111');
   };
 
   const closePopup = () => {
