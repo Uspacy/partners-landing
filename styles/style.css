@@ -363,8 +363,9 @@ h6 {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 1204px;
+    max-width: 708px;
     width: 100%;
+    opacity: 0.7;
 }
 
 .img-wrapper img {
@@ -1699,6 +1700,9 @@ input::-webkit-inner-spin-button {
 }
 
 @media(max-width: 767px) {
+    .home-header {
+        padding-top: 47px;
+    }
     .home-page-top-section {
         padding-bottom: 64px;
     }
@@ -1777,7 +1781,15 @@ input::-webkit-inner-spin-button {
     }
     .pop-up-wrapper {
         padding: 95px 24px 84px 24px;
+        overflow-y: auto;
     }
+    .popup-padding {
+        padding: 21px 0 6px 0;
+    }
+    .pop-up-footer {
+        display: none;
+    }
+
 }
 
 @media(max-width: 575px) {
@@ -1790,9 +1802,6 @@ input::-webkit-inner-spin-button {
     }
     .what-is-uspacy {
         padding: 75px 0 66px;
-    }
-    .what-is-uspacy img {
-        margin-top: 30px;
     }
     .item-wrapper {
         flex-wrap: wrap;
