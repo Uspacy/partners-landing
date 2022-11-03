@@ -17,11 +17,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-    <link rel="manifest" href="./images/site.webmanifest">
     <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="./images/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="./images/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -170,16 +168,16 @@
                     родини партнерів Uspacy</h2>
                     <p class="text-light">Створюй та розвивай власний бізнес на основі чесного та відкритого партнерства з нами</p>
                     <form class="footer-form" action="">
-                        <input name="username" id="username" class="form-input text-light" type="text" placeholder="Ім’я та прізвище">
-                        <input name="email" id="email" class="form-input text-light" type="text" placeholder="Електронна пошта">
-                        <input name="phone" id="phone" class="form-input text-light" type="number" placeholder="Номер телефону (з кодом оператора)">
+                        <input name="username" class="form-input text-light" type="text" placeholder="Ім’я та прізвище">
+                        <input name="email" class="form-input text-light" type="text" placeholder="Електронна пошта">
+                        <input name="phone" class="form-input text-light" type="number" placeholder="Номер телефону (з кодом оператора)">
                         <div class="checkbox-wrapper">
-                            <input  id="checkbox" type="checkbox" name="agree" class="form-checkbox">
+                            <input  type="checkbox" name="agree" class="form-checkbox">
                             <label for="agree" class="text-mini">Даю згоду на обробку персональних даних згідно <a href="privacypolicy.html" style="color: #4238E5;">політикою конфіденційності.</a></label>
                         </div>
-                        <button id="bottom-from-submit-btn" class="magenta-btn button-text" href="#" disabled><span class="plus2"></span>Cтати партнером uspacy</button>
+                        <button name="submit" class="magenta-btn button-text" href="#" disabled><span class="plus2"></span>Cтати партнером uspacy</button>
                     </form>
-                    <div class="succesed-form">
+                    <div class="succesed-form footer-success">
                         <span>🤩</span>
                         <span>Заявку успішно надіслано!</span>
                         <p>Зовсім скоро ми проінформуємо вас про запуск партнерської програми Uspacy</p>
@@ -209,18 +207,19 @@
             </button>
         </div>
         <div class="pop-up-content">
-            <p class="text-light">Ставай частиною родини партнерів Uspacy</p>
-            <form class="footer-form" action="">
-                <input name="username" id="username" class="form-input text-light" type="text" placeholder="Ім’я та прізвище" autocomplete="off">
-                <input name="email" id="email" class="form-input text-light" type="text" placeholder="Електронна пошта">
-                <input name="phone" id="phone" class="form-input text-light" type="number" placeholder="Номер телефону (з кодом оператора)">
+            <h2>Ставай частиною родини партнерів Uspacy</h2>
+            <p class="popup-padding text-light">Створюйте та розвивайте свій власний бізнес на<br> основі чесного партнерства з нами</p>
+            <form class="footer-form popup-form" action="">
+                <input name="username" class="popup-input text-light" type="text" placeholder="Ім’я та прізвище" autocomplete="off">
+                <input name="email" class="popup-input text-light" type="text" placeholder="Електронна пошта">
+                <input name="phone" class="popup-input text-light" type="number" placeholder="Номер телефону (з кодом оператора)">
                 <div class="checkbox-wrapper">
-                    <input  id="checkbox" type="checkbox" name="agree" class="form-checkbox">
+                    <input type="checkbox" name="agree" class="form-checkbox">
                     <label for="agree" class="text-mini">Даю згоду на обробку персональних даних згідно <a href="privacypolicy.html" style="color: #4238E5;">політикою конфіденційності.</a></label>
                 </div>
-                <button id="bottom-from-submit-btn" class="magenta-btn button-text"><span class="plus2"></span>Cтати партнером uspacy</button>
+                <button name="submit" class="white-btn button-text"><span class="plus6"></span>Cтати партнером uspacy</button>
             </form>
-            <div class="succesed-form">
+            <div class="succesed-form popup-success">
                 <span>🤩</span>
                 <span>Заявку успішно надіслано!</span>
                 <p>Зовсім скоро ми проінформуємо вас про запуск партнерської програми Uspacy</p>

@@ -20,14 +20,15 @@ $(document).ready(function () {
   const openPopupBtn = document.querySelectorAll(".open-popup");
   const popup = document.querySelector(".pop-up-wrapper");
 
-  const openPopup = () => {
+  const openPopup = (e) => {
+    e.preventDefault();
     overlay.classList.add("active");
     body.classList.add("overflow");
     popup.classList.add("active");
-    console.log('111');
   };
 
-  const closePopup = () => {
+  const closePopup = (e) => {
+    e.preventDefault();
     overlay.classList.remove("active");
     body.classList.remove("overflow");
     popup.classList.remove("active");
@@ -89,5 +90,29 @@ $(document).ready(function () {
   }
 
   listenChangeColor()
+
+  /* ACCORDION PANEL */
+
+  const accordionPanel = (accordionItem, accordionContent, activeClass) => {
+
+    const selectors = document.querySelectorAll(`.${accordionItem}`);
+    const contents = document.querySelectorAll(`.${accordionContent}`);
+
+    selectors.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        
+        if(item.classList.contains(activeClass)) return 
+
+        document.querySelector(`.${accordionContent}.${activeClass}`).classList.remove(activeClass)
+        document.querySelector(`.${accordionItem}.${activeClass}`).classList.remove(activeClass)
+        item.classList.add(activeClass)
+        contents[index].classList.add(activeClass)
+
+      })
+    })
+
+  }
+
+  accordionPanel('accordion-item-titleWrapper', 'accordion-item-expanded', 'active')
 
 });

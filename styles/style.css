@@ -591,9 +591,30 @@ h6 {
 .accordion-item:first-child {
     border-top: 2px solid #DDDCF880;
 }
-.accord-number-active span {
+
+.accordion-item-titleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-item-titleWrapper.active span:not(.accordion-item-icon) {
     padding-right: 17px;
     color: #4238E5 !important;
+}
+
+.accordion-item-icon {
+    padding-right: 0;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.accordion-item-titleWrapper.active .accordion-item-icon {
+    transform: rotate(-90deg);
+}
+
+.accordion-item-titleWrapper.active .accordion-item-icon svg path{
+    fill: #4238E5
 }
 
 .accord-number span {
@@ -606,15 +627,11 @@ h6 {
     margin-top: 20px;
 }
 
-.accordion-expanded-visible {
+.accordion-item-expanded.active {
     display: block;
 }
 
-.accordion-item-titleWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .accordion-item:hover {
     cursor: pointer;
