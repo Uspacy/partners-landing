@@ -1228,6 +1228,7 @@ input::-webkit-inner-spin-button {
     z-index: 0;
     padding: 95px 126px 84px 110px;
     transition: 0.3s ease;
+    overflow-y: auto;
 }
 
 .pop-up-wrapper.active {
