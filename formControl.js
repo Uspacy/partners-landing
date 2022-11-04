@@ -9,8 +9,6 @@ const formAction = (parent, successForm) => {
   const checkBoxEl = form.querySelector("[name='agree']");
   const submitBtn = form.querySelector("[name='submit']");
   const succesedForm = document.querySelector(successForm);
-  console.log('usernameEl: ', usernameEl)
-  console.log('succesedForm: ', succesedForm)
   const checkUsername = () => {
     let valid = false;
 
