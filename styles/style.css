@@ -1701,7 +1701,7 @@ input::-webkit-inner-spin-button {
 
 @media(max-width: 767px) {
     .home-header {
-        padding-top: 47px;
+        padding-top: 30px;
     }
     .home-page-top-section {
         padding-bottom: 64px;
