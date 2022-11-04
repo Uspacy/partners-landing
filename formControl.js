@@ -26,8 +26,8 @@ const formAction = (parent, successForm) => {
   };
 
   const checkPhone = () => {
-    var isValidPhone = /^([+]?[0-9\s-\(\)]{3,25})*$/i.test(phoneEl.value);
-
+    var isValidPhone = typeof string;
+    // var isValidPhone = /^([+]?[0-9\s-\(\)]{3,25})*$/i.test(phoneEl.value);
     return isValidPhone;
   };
 
