@@ -1,8 +1,7 @@
-
 $(document).ready(function () {
   const body = document.body;
-  const header = document.querySelector('header')
-  
+  const header = document.querySelector("header");
+
   /* INIT CAROUSEL */
 
   $(".testimonial-wrapper").slick({
@@ -10,7 +9,7 @@ $(document).ready(function () {
     speed: 600,
     slidesToShow: 1,
     arrows: false,
-    fade: true
+    fade: true,
   });
 
   /* POPUP SCRIPTS */
@@ -53,66 +52,67 @@ $(document).ready(function () {
         return itemMinHeight.height;
       })
       .sort((a, b) => b - a)[0];
-    
+
     if (window.innerWidth > 575) {
       elements.forEach((item) => (item.style.minHeight = `${minHeight}px`));
     } else {
       elements.forEach((item) => item.style.removeProperty("minHeight"));
     }
-
   };
 
   setMinHeight(".list-wrapper", "h2");
-  setMinHeight('.benefits', 'h5')
-
+  setMinHeight(".benefits", "h5");
 
   /* CHANGE BODY COLOR ON SCROLL */
 
   const listenChangeColor = () => {
-
-    const sections = document.querySelectorAll('[data-color]');
-    const offsetSections = Array.from(sections).map( item => {
+    const sections = document.querySelectorAll("[data-color]");
+    const offsetSections = Array.from(sections).map((item) => {
       return {
-        color: item.getAttribute('data-color'),
-        offset: item.offsetTop
-      }
-    })
+        color: item.getAttribute("data-color"),
+        offset: item.offsetTop,
+      };
+    });
 
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
+      const setColor = offsetSections
+        .filter((item) => window.scrollY >= item.offset - 83)
+        .at(-1).color;
+      const classListClear = ["blue", "white", "dark"].filter(
+        (item) => item !== setColor
+      );
+      header.classList.remove(...classListClear);
+      !header.classList.contains(setColor) && header.classList.add(setColor);
+    });
+  };
 
-      const setColor = offsetSections.filter(item => window.scrollY >= item.offset).at(-1).color
-      const classListClear = ['blue', 'white', 'dark'].filter(item => item !== setColor)
-      header.classList.remove(...classListClear)
-      !header.classList.contains(setColor) && header.classList.add(setColor)
-
-    })
-
-  }
-
-  listenChangeColor()
+  listenChangeColor();
 
   /* ACCORDION PANEL */
 
   const accordionPanel = (accordionItem, accordionContent, activeClass) => {
-
     const selectors = document.querySelectorAll(`.${accordionItem}`);
     const contents = document.querySelectorAll(`.${accordionContent}`);
 
     selectors.forEach((item, index) => {
-      item.addEventListener('click', () => {
-        
-        if(item.classList.contains(activeClass)) return 
+      item.addEventListener("click", () => {
+        if (item.classList.contains(activeClass)) return;
 
-        document.querySelector(`.${accordionContent}.${activeClass}`).classList.remove(activeClass)
-        document.querySelector(`.${accordionItem}.${activeClass}`).classList.remove(activeClass)
-        item.classList.add(activeClass)
-        contents[index].classList.add(activeClass)
+        document
+          .querySelector(`.${accordionContent}.${activeClass}`)
+          .classList.remove(activeClass);
+        document
+          .querySelector(`.${accordionItem}.${activeClass}`)
+          .classList.remove(activeClass);
+        item.classList.add(activeClass);
+        contents[index].classList.add(activeClass);
+      });
+    });
+  };
 
-      })
-    })
-
-  }
-
-  accordionPanel('accordion-item-titleWrapper', 'accordion-item-expanded', 'active')
-
+  accordionPanel(
+    "accordion-item-titleWrapper",
+    "accordion-item-expanded",
+    "active"
+  );
 });
