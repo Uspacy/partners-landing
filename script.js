@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     window.addEventListener("scroll", () => {
       const setColor = offsetSections
-        .filter((item) => window.scrollY >= item.offset - 83)
+        .filter((item) => window.scrollY >= item.offset - 95)
         .at(-1).color;
       const classListClear = ["blue", "white", "dark"].filter(
         (item) => item !== setColor
