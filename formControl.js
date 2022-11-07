@@ -1,11 +1,11 @@
 
 
 const formAction = (parent, successForm) => {
-
   const form = document.querySelector(parent);
   const usernameEl = form.querySelector("[name='username']");
   const emailEl = form.querySelector("[name='email']");
   const phoneEl = form.querySelector("[name='phone']");
+  const phoneElVal = form.querySelector("[name='phone']").value;
   const checkBoxEl = form.querySelector("[name='agree']");
   const submitBtn = form.querySelector("[name='submit']");
   const succesedForm = document.querySelector(successForm);
@@ -25,9 +25,17 @@ const formAction = (parent, successForm) => {
     return valid;
   };
 
+  phoneEl.addEventListener("focus", () => {
+    if (!/^\+\d*$/.test(phoneEl.value))
+      phoneEl.value = "+";
+  });
+
+  phoneEl.addEventListener("keypress", (e) => {
+    if (!/\d/.test(e.key)) e.preventDefault();
+  });
+
   const checkPhone = () => {
     var isValidPhone = typeof string;
-    // var isValidPhone = /^([+]?[0-9\s-\(\)]{3,25})*$/i.test(phoneEl.value);
     return isValidPhone;
   };
 
@@ -57,10 +65,8 @@ const formAction = (parent, successForm) => {
   const isBetween = (length, min, max) =>
     length < min || length > max ? false : true;
 
-    
-    
-    function formValidate() {
-      let isUsernameValid = checkUsername(),
+  function formValidate() {
+    let isUsernameValid = checkUsername(),
       isEmailValid = checkEmail(),
       isPhoneValid = checkPhone(),
       isCheckBoxValid = checkCheckBox();
@@ -69,7 +75,6 @@ const formAction = (parent, successForm) => {
       isUsernameValid && isEmailValid && isPhoneValid && isCheckBoxValid;
 
     if (isFormValid) {
-      
       submitBtn.disabled = false;
     } else {
       submitBtn.disabled = true;
@@ -87,10 +92,7 @@ const formAction = (parent, successForm) => {
       phone: phoneEl.value,
       username: usernameEl.value,
     });
-
   });
-
-
 
   const debounce = (fn, delay = 500) => {
     let timeoutId;
@@ -145,8 +147,7 @@ const formAction = (parent, successForm) => {
       }
       setTimeout(
         () => (
-          (succesedForm.style.display = "none"),
-          (form.style.display = "flex")
+          (succesedForm.style.display = "none"), (form.style.display = "flex")
         ),
         3000
       );
@@ -154,7 +155,6 @@ const formAction = (parent, successForm) => {
       console.log("Виникла помилка при відправці!");
     }
   }
-
 }
 
 

@@ -648,6 +648,10 @@ h6 {
     font-size: 1rem;
 }
 
+.bot-accordion-link {
+    display: none;
+}
+
 .accordion-li {
     margin-bottom: 16px;
 }
@@ -1822,6 +1826,18 @@ input::-webkit-inner-spin-button {
     }
     .accordion {
         margin-bottom: 32px;
+    }
+    .accordion-item {
+        padding-bottom: 40px;
+    }
+    .accordion-ul {
+        margin-top: 24px;
+    }
+    .top-accordion-link {
+        display: none;
+    }
+    .bot-accordion-link {
+        display: block;
     }
     .partner-earnings-items {
         margin-bottom: 32px;
