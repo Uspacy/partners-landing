@@ -5,7 +5,7 @@ const formAction = (parent, successForm) => {
   const usernameEl = form.querySelector("[name='username']");
   const emailEl = form.querySelector("[name='email']");
   const phoneEl = form.querySelector("[name='phone']");
-  const phoneElVal = form.querySelector("[name='phone']").value;
+  const countryEl = form.querySelector("[name='country']");
   const checkBoxEl = form.querySelector("[name='agree']");
   const submitBtn = form.querySelector("[name='submit']");
   const succesedForm = document.querySelector(successForm);
@@ -26,8 +26,7 @@ const formAction = (parent, successForm) => {
   };
 
   phoneEl.addEventListener("focus", () => {
-    if (!/^\+\d*$/.test(phoneEl.value))
-      phoneEl.value = "+";
+    if (!/^\+\d*$/.test(phoneEl.value)) phoneEl.value = "+";
   });
 
   phoneEl.addEventListener("keypress", (e) => {
@@ -91,6 +90,7 @@ const formAction = (parent, successForm) => {
       email: emailEl.value,
       phone: phoneEl.value,
       username: usernameEl.value,
+      country: countryEl.value,
     });
   });
 
@@ -142,6 +142,7 @@ const formAction = (parent, successForm) => {
         mode: "no-cors",
       });
       if (response) {
+        form.reset();
         form.style.display = "none";
         succesedForm.style.display = "block";
       }
@@ -155,7 +156,7 @@ const formAction = (parent, successForm) => {
       console.log("Виникла помилка при відправці!");
     }
   }
-}
+};
 
 
 formAction(".footer-form", ".footer-success")

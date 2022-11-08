@@ -1,6 +1,7 @@
 $(document).ready(function () {
   const body = document.body;
   const header = document.querySelector("header");
+  const headerWrapper = document.querySelector(".header-wrapper");
 
   /* INIT CAROUSEL */
 
@@ -17,6 +18,7 @@ $(document).ready(function () {
   const overlay = document.querySelector(".overlay");
   const closePopupBtn = document.querySelectorAll(".close-popup");
   const openPopupBtn = document.querySelectorAll(".open-popup");
+  const form = document.querySelector(".popup-form");
   const popup = document.querySelector(".pop-up-wrapper");
 
   const openPopup = (e) => {
@@ -67,6 +69,8 @@ $(document).ready(function () {
 
   const listenChangeColor = () => {
     const sections = document.querySelectorAll("[data-color]");
+    const deltaHeight = header.clientHeight - headerWrapper.clientHeight / 2;
+
     const offsetSections = Array.from(sections).map((item) => {
       return {
         color: item.getAttribute("data-color"),
@@ -76,7 +80,7 @@ $(document).ready(function () {
 
     window.addEventListener("scroll", () => {
       const setColor = offsetSections
-        .filter((item) => window.scrollY >= item.offset - 95)
+        .filter((item) => window.scrollY >= item.offset - deltaHeight)
         .at(-1).color;
       const classListClear = ["blue", "white", "dark"].filter(
         (item) => item !== setColor
@@ -85,8 +89,6 @@ $(document).ready(function () {
       !header.classList.contains(setColor) && header.classList.add(setColor);
     });
   };
-
-  listenChangeColor();
 
   /* ACCORDION PANEL */
 
