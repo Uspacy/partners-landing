@@ -5,7 +5,6 @@ const formAction = (parent, successForm) => {
   const usernameEl = form.querySelector("[name='username']");
   const emailEl = form.querySelector("[name='email']");
   const phoneEl = form.querySelector("[name='phone']");
-  const countryEl = form.querySelector("[name='country']");
   const checkBoxEl = form.querySelector("[name='agree']");
   const submitBtn = form.querySelector("[name='submit']");
   const succesedForm = document.querySelector(successForm);
@@ -90,7 +89,6 @@ const formAction = (parent, successForm) => {
       email: emailEl.value,
       phone: phoneEl.value,
       username: usernameEl.value,
-      country: countryEl.value,
     });
   });
 
