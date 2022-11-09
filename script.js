@@ -90,6 +90,8 @@ $(document).ready(function () {
     });
   };
 
+  listenChangeColor()
+
   /* ACCORDION PANEL */
 
   const accordionPanel = (accordionItem, accordionContent, activeClass) => {
