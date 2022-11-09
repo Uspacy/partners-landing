@@ -8,6 +8,8 @@ const formAction = (parent, successForm) => {
   const checkBoxEl = form.querySelector("[name='agree']");
   const submitBtn = form.querySelector("[name='submit']");
   const succesedForm = document.querySelector(successForm);
+  const emailE = document.querySelector(".input-error");
+  const phoneE = document.querySelector(".phone-error");
   const checkUsername = () => {
     let valid = false;
 
@@ -33,9 +35,28 @@ const formAction = (parent, successForm) => {
   });
 
   const checkPhone = () => {
-    var isValidPhone = typeof string;
+    const min = 9, max = 19
+    const phone = phoneEl.value.trim()
+    let isValidPhone = false
+    if (!isBetween(phone.length, min, max)) {
+      isValidPhone = false;
+    } else {
+      isValidPhone = true
+    }
     return isValidPhone;
   };
+
+  function phoneError() {
+    if (checkPhone(phoneEl.value)) {
+      phoneEl.style.borderColor = "#2CD652";
+      phoneE.style.display = "none";
+    } else {
+      phoneEl.style.borderColor = "#EE8282";
+      phoneE.style.display = "block";
+    }
+  };
+  
+  phoneEl.addEventListener("input", phoneError);
 
   const checkCheckBox = () => {
     let valid = checkBoxEl.checked;
@@ -45,19 +66,31 @@ const formAction = (parent, successForm) => {
   const checkEmail = () => {
     let valid = false;
     const email = emailEl.value.trim();
-    if (!isRequired(email) && !isEmailValid(email)) {
+    if (isRequired(email) && isEmailValid(email)) {
+      valid = true
     } else {
-      valid = true;
+      valid = false;
     }
-
     return valid;
   };
 
   const isEmailValid = (email) => {
     const re =
-      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+      /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
     return re.test(email);
   };
+
+  function onInput() {
+    if (isEmailValid(emailEl.value)) {
+      emailEl.style.borderColor = "#2CD652";
+      emailE.style.display = "none";
+    } else {
+      emailEl.style.borderColor = "#EE8282";
+      emailE.style.display = "block";
+    }
+  }
+
+  emailEl.addEventListener("input", onInput);
 
   const isRequired = (value) => (value === "" ? false : true);
   const isBetween = (length, min, max) =>
