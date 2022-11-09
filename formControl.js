@@ -8,8 +8,8 @@ const formAction = (parent, successForm) => {
   const checkBoxEl = form.querySelector("[name='agree']");
   const submitBtn = form.querySelector("[name='submit']");
   const succesedForm = document.querySelector(successForm);
-  const emailE = document.querySelector(".input-error");
-  const phoneE = document.querySelector(".phone-error");
+  const emailE = form.querySelector(".input-error");
+  const phoneE = form.querySelector(".phone-error");
   const checkUsername = () => {
     let valid = false;
 
