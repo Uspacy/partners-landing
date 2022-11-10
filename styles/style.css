@@ -635,6 +635,8 @@ h6 {
 
 .accordion-item-expanded.active {
   display: block;
+  transition: 3s ease-in;
+
 }
 
 .accordion-item:hover {
@@ -649,6 +651,10 @@ h6 {
   font-family: "e-ukraine", "Arial";
   font-weight: 700;
   font-size: 1rem;
+}
+
+.accordion-link:hover {
+  color: #857DFF;
 }
 
 .bot-accordion-link {
@@ -673,6 +679,7 @@ h6 {
 .item-right-side {
   max-width: 450px;
   width: 100%;
+  transition: 3s ease-in;
 }
 
 .item-left-side {
@@ -939,6 +946,7 @@ footer {
 .form-input {
   border: 0;
   border-bottom: 2px solid #fff;
+  border-radius: 0;
   background: none;
   color: #7373b1;
   padding: 19.5px 0 19.5px 0;
@@ -1310,6 +1318,10 @@ input::-webkit-inner-spin-button {
   background-color: #4238e5;
 }
 
+.pop-up-header .close-popup {
+  transform: rotate(45deg);
+}
+
 .pop-up-footer button {
   display: flex;
   align-items: center;
@@ -1493,6 +1505,7 @@ input::-webkit-inner-spin-button {
   max-width: 300px;
   width: 100%;
 }
+
 
 .plus4 {
   display: block;
@@ -1721,7 +1734,10 @@ input::-webkit-inner-spin-button {
 @media (max-width: 1024px) {
   .benefits-item {
     width: calc(50% - 50px);
-    margin-bottom: 53px;
+    margin-bottom: 78px;
+  }
+  .benefits-item:last-child {
+    margin-bottom: 0;
   }
   .accordion-wrapper {
     padding-left: 0;
@@ -1831,9 +1847,14 @@ input::-webkit-inner-spin-button {
   .pop-up-footer {
     display: none;
   }
+
+
 }
 
 @media (max-width: 575px) {
+  .accordion-link{
+    font-size: 12px;
+  }
   .img-wrapper img {
     width: 523px;
     left: 0;
@@ -1870,8 +1891,8 @@ input::-webkit-inner-spin-button {
   .accordion {
     margin-bottom: 32px;
   }
-  .accordion-item {
-    padding-bottom: 40px;
+  .bot-accordion-link {
+    padding-bottom: 20px;
   }
   .accordion-ul {
     margin-top: 24px;
