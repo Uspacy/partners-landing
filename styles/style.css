@@ -1170,6 +1170,10 @@ input::-webkit-inner-spin-button {
   border-bottom: 10px solid #4238e5;
   width: 100%;
   z-index: 1;
+  background-image: url('../images/bg-inner.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .stroke-plus-btn {
