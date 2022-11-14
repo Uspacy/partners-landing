@@ -11,6 +11,8 @@ $(document).ready(function () {
     slidesToShow: 1,
     arrows: false,
     fade: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
   });
 
   /* POPUP SCRIPTS */
