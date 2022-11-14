@@ -12,7 +12,7 @@ $(document).ready(function () {
     arrows: false,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 7000,
   });
 
   /* POPUP SCRIPTS */
