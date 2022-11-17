@@ -957,6 +957,7 @@ footer {
   flex-direction: column;
   max-width: 484px;
   width: 100%;
+  position: relative;
 }
 
 .form-input {
@@ -1121,10 +1122,14 @@ input::-webkit-inner-spin-button {
 
 .phone-error {
   display: none;
+  /* position: absolute;
+  top: 228px; */
 }
 
 .email-error {
   display: none;
+  /* position: absolute;
+  top: 150px; */
 }
 
 .input-error::before {
