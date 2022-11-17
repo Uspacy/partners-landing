@@ -673,7 +673,7 @@ h6 {
 }
 
 .accordion-link:hover {
-  color: #857DFF;
+  color: #857dff;
 }
 
 .bot-accordion-link {
@@ -986,6 +986,16 @@ footer {
   color: #7373b1;
 }
 
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:hover,
+.form-input:-webkit-autofill:focus,
+.form-input:-webkit-autofill:active {
+  -webkit-text-fill-color: #857dff !important;
+  color: #857dff !important;
+  box-shadow: 0 0 0 0 inherit inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 /*popup-form*/
 
 .popup-input {
@@ -1012,6 +1022,16 @@ footer {
 
 .popup-input::placeholder {
   color: #7373b1;
+}
+
+.popup-input:-webkit-autofill,
+.popup-input:-webkit-autofill:hover,
+.popup-input:-webkit-autofill:focus,
+.popup-input:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 0 inherit inset !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /*popup-form*/
@@ -1094,7 +1114,7 @@ input::-webkit-inner-spin-button {
 }
 
 .input-error {
-  color: #EE8282;
+  color: #ee8282;
   font-size: 12px;
   font-weight: 500;
 }
@@ -1108,7 +1128,7 @@ input::-webkit-inner-spin-button {
 }
 
 .input-error::before {
-  content: ' ';
+  content: " ";
   background-image: url(../images/input-error.svg);
   background-repeat: no-repeat;
   display: inline-block;
@@ -1186,7 +1206,7 @@ input::-webkit-inner-spin-button {
   border-bottom: 10px solid #4238e5;
   width: 100%;
   z-index: 1;
-  background-image: url('../images/bg-inner.png');
+  background-image: url("../images/bg-inner.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1526,7 +1546,6 @@ input::-webkit-inner-spin-button {
   width: 100%;
 }
 
-
 .plus4 {
   display: block;
   width: 12px;
@@ -1765,13 +1784,13 @@ input::-webkit-inner-spin-button {
 }
 
 /* On mouse-over, add a grey background color */
-.containerbox:hover input~.checkmark {
+.containerbox:hover input ~ .checkmark {
   background-color: rgba(255, 255, 255, 0.278);
 }
 
 /* When the checkbox is checked, add a blue background */
-.containerbox input:checked~.checkmark {
-  background-color: #2196F3;
+.containerbox input:checked ~ .checkmark {
+  background-color: #2196f3;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -1782,7 +1801,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Show the checkmark when checked */
-.containerbox input:checked~.checkmark:after {
+.containerbox input:checked ~ .checkmark:after {
   display: block;
 }
 
@@ -1949,14 +1968,14 @@ input::-webkit-inner-spin-button {
   .link-3 {
     max-width: 100%;
   }
-  .be-a-partner-btn{
+  .be-a-partner-btn {
     width: 100%;
   }
   .magenta-btn {
-    max-width: 100%
+    max-width: 100%;
   }
   footer {
-    padding-top: 0
+    padding-top: 0;
   }
   .accordion-link {
     font-size: 12px;
@@ -2040,7 +2059,7 @@ input::-webkit-inner-spin-button {
   .slick-dots {
     left: 10px;
   }
-  .title-wrapper{
+  .title-wrapper {
     flex-direction: column;
     align-items: flex-start;
   }
