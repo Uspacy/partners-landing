@@ -1,5 +1,3 @@
-
-
 const formAction = (parent, successForm) => {
   const form = document.querySelector(parent);
   const usernameEl = form.querySelector("[name='username']");
@@ -35,13 +33,14 @@ const formAction = (parent, successForm) => {
   });
 
   const checkPhone = () => {
-    const min = 9, max = 19
-    const phone = phoneEl.value.trim()
-    let isValidPhone = false
+    const min = 9,
+      max = 19;
+    const phone = phoneEl.value.trim();
+    let isValidPhone = false;
     if (!isBetween(phone.length, min, max)) {
       isValidPhone = false;
     } else {
-      isValidPhone = true
+      isValidPhone = true;
     }
     return isValidPhone;
   };
@@ -54,8 +53,8 @@ const formAction = (parent, successForm) => {
       phoneEl.style.borderColor = "#EE8282";
       phoneE.style.display = "block";
     }
-  };
-  
+  }
+
   phoneEl.addEventListener("input", phoneError);
 
   const checkCheckBox = () => {
@@ -67,7 +66,7 @@ const formAction = (parent, successForm) => {
     let valid = false;
     const email = emailEl.value.trim();
     if (isRequired(email) && isEmailValid(email)) {
-      valid = true
+      valid = true;
     } else {
       valid = false;
     }
@@ -118,7 +117,7 @@ const formAction = (parent, successForm) => {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    sendPostData({
+    debounceSendPostData({
       email: emailEl.value,
       phone: phoneEl.value,
       username: usernameEl.value,
@@ -187,8 +186,9 @@ const formAction = (parent, successForm) => {
       console.log("Виникла помилка при відправці!");
     }
   }
+
+  const debounceSendPostData = debounce(sendPostData);
 };
 
-
-formAction(".footer-form", ".footer-success")
-formAction(".popup-form", ".popup-success")
+formAction(".footer-form", ".footer-success");
+formAction(".popup-form", ".popup-success");
