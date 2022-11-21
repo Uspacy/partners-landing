@@ -120,7 +120,6 @@ const formAction = (parent, successForm) => {
     const btn = form.querySelector("button");
     btn.disabled = true;
     setTimeout(() => (btn.disabled = false), 7000);
-    console.log("btn:", btn);
     sendPostData({
       email: emailEl.value,
       phone: phoneEl.value,
