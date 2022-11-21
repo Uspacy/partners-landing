@@ -117,7 +117,10 @@ const formAction = (parent, successForm) => {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    debounceSendPostData({
+    const btn = form.querySelector("button");
+    btn.disabled = true;
+    setTimeout(() => (btn.disabled = false), 7000);
+    sendPostData({
       email: emailEl.value,
       phone: phoneEl.value,
       username: usernameEl.value,
@@ -186,8 +189,6 @@ const formAction = (parent, successForm) => {
       console.log("Виникла помилка при відправці!");
     }
   }
-
-  const debounceSendPostData = debounce(sendPostData, 7000);
 };
 
 formAction(".footer-form", ".footer-success");
