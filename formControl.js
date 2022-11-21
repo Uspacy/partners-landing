@@ -187,7 +187,7 @@ const formAction = (parent, successForm) => {
     }
   }
 
-  const debounceSendPostData = debounce(sendPostData, 3000);
+  const debounceSendPostData = debounce(sendPostData, 6000);
 };
 
 formAction(".footer-form", ".footer-success");
