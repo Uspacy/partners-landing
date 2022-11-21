@@ -8,7 +8,6 @@ const formAction = (parent, successForm) => {
   const succesedForm = document.querySelector(successForm);
   const emailE = form.querySelector(".input-error");
   const phoneE = form.querySelector(".phone-error");
-
   const checkUsername = () => {
     let valid = false;
 
@@ -113,7 +112,7 @@ const formAction = (parent, successForm) => {
   }
 
   [usernameEl, emailEl, phoneEl, checkBoxEl].forEach((item) => {
-    item.addEventListener("input", debounce(formValidate));
+    item.addEventListener("input", formValidate);
   });
 
   form.addEventListener("submit", function (e) {
